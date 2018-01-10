@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pixel Art Maker</title>
+        <link href="https://fonts.googleapis.com/css?family=Aclonica|Arbutus|Architects+Daughter|Eater|Flavors|Henny+Penny|Loved+by+the+King|NTR|Nosifer|Snowburst+One|Sofadi+One|The+Girl+Next+Door" rel="stylesheet">
+        <link rel="stylesheet" href="css/pixel.css">
+    </head>
+    <body>
+        <h1>Pixel Art Maker</h1>
+        <section class="artBoard">
+            <h2>Design Your Canvas</h2>
+            <h3>Choose Grid Size</h2>
+            <form id="sizePicker">
+                <p>Rows:</p>   
+                <input type="number" id="input_height" name="height" min="1" value="30" style="">
+                   <p style="margin-left: 6%">Columns:</p>
+                <input type="number" id="input_width" name="width" min="1" value="30">
+                <input id="submit" type="submit" value="Create a Grid!" style="margin-left: 3%">
+            </form><br>
+            <h2 id="designCanvash2" class="hidden">Design Canvas</h2>
+            <div class="row">
+                <div class="colLeft">
+                    <div id="pickColor" class="hidden">
+                        <h3>Pick A Color</h3>
+                        <input type="color" id="colorPicker" value="#ff0000">
+                    </div><br>
+                    <div id="gridBorder" class="hidden">
+                        <input type="checkbox" id="borders" value="withBorder" checked="checked" name="tableBorder">
+                        <label for="borders" class="borderTxt">Borders</label>
+                    </div>
+                    <div class="buttons">
+                        <button id="allCells" class="btn" style="background-color: #94cb56">Click & move</button>
+                        <button id="oneCell" class="btn" style="background-color: #ff96ae">Single click</button>
+                        <button id="removeBtn" class="btn" type="button" style="background-color: #58a8ed">Remove table</button>
+                        <button id="clearBtn" class="btn" type="button" style="margin-right: 0; background-color: #f9f226">Clear table</button>
+                    </div>
+                </div>
+                <p id="doubleClick" class="hidden" style="font-size: 20px; font-weight: 600">Double click to remove the color</p>
+                <div class="colRight">
+                    <table id="pixel_canvas"></table>
+                </div>
+            </div><br><br>
+        </section>
+        <footer id="footer">
+            <p style="margin-bottom: 5px">Made by Aga Slota-Stepniewska, &copy; 2018</p>
+            <p><a href="mailto:mail@agastepniewska.co.uk" class="mail">mail@agastepniewska.co.uk</a></p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/pixel.js"></script>
+    </body>
+</html>

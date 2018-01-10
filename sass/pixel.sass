@@ -1,0 +1,169 @@
+$font1: 'Nosifer', cursive
+$font2: 'Henny Penny', cursive
+$font3: 'Snowburst One', cursive
+$font4: 'Architects Daughter', cursive
+
+$color1: #fff
+$color2: #f9f226
+$color3: #58a8ed
+
+.flexSettings
+    display: flex
+    justify-content: center
+    align-items: center
+.boxShadow
+    border: none
+    -webkit-box-shadow: 4px 5px 8px 2px rgba(0,0,0,0.8)
+    box-shadow: 4px 5px 8px 2px rgba(0,0,0,0.8) 
+
+body 
+    text-align: center
+    color: $color1
+    margin: 0 auto
+    background-image: url(../assets/2.jpeg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+
+h1 
+    font-family: $font1
+    color: $color1
+    text-shadow: 5px 4px 3px rgba(10, 10, 10, 0.7)
+    font-size: 90px
+    margin: 0.2em
+
+h2 
+    margin: 15px
+    font-size: 2.5em
+    font-family: $font2 
+    text-shadow: 4px 3px 3px rgba(10, 10, 10, 0.8)
+
+h3
+    margin-top: 0
+    font-size: 1.3em
+    font-family: $font3
+    font-weight: 700
+p
+    margin-right: 2%
+    margin-bottom: 1%
+    margin-top: 4px
+    font-family: $font3
+
+.hidden 
+    display: none
+
+.artBoard
+    max-width: 95%
+    background-color: rgba(0,0,0, 0.5)
+    margin: auto
+    padding-top: 3%
+   
+#sizePicker 
+    max-width: 47%
+    margin: auto
+    @extend .flexSettings
+    flex-wrap: wrap
+    flex-direction: row
+
+#submit
+    background-color: $color2
+    @extend .boxShadow
+    width: 8em
+    height: 25px
+    font-family: $font4
+    font-weight: 500
+    font-size: 15px
+
+input[type=number] 
+    width: 4em
+    height: 20px
+    @extend .boxShadow
+    text-align: center
+
+input[type=checkbox]
+    width: 20px
+    height: 20px
+    @extend .boxShadow
+
+.row 
+    margin: auto
+    max-width: 100%
+
+.colLeft 
+    @extend .flexSettings
+    flex-direction: column
+    padding: 2%
+
+.borderTxt
+    font-family: Snowburst One
+    font-size: 18px
+
+.buttons
+    @extend .flexSettings
+    flex-direction: row
+    flex-wrap: wrap
+    width: 100%
+
+.btn 
+    width: 150px
+    height: 40px
+    margin-top: 3%
+    background-color: green
+    margin-right: 1%
+    cursor: pointer
+    @extend .boxShadow
+    font-family: $font4
+    font-weight: 500
+    font-size: 20px
+  
+.colRight 
+    margin-top: 1%
+    @extend .flexSettings
+    flex-direction: column
+    padding: 2%
+
+table 
+    border-collapse: collapse
+    @extend .boxShadow
+    margin: 0 auto
+    background-color: $color1
+
+tr,
+td 
+    border: 1px solid black
+    height: 15px
+    width: 15px
+
+.hide 
+    border: none
+
+footer 
+    width: 100%
+    height: 10vh
+    background-color: rgba(0,0,0, 0.8)
+    @extend .flexSettings
+    flex-direction: column
+    margin-top: 2%
+    p
+        font-size: 14px
+        margin: 0 auto
+    a
+        color: $color1
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+            color: $color3
+            
+
+@media(max-width: 768px)
+    h1
+        font-size: 50px
+    h2
+        font-size: 1.8em
+    #submit
+        margin-top: 7%
+    
+@media(max-width: 375px)
+    h1
+        font-size: 38px

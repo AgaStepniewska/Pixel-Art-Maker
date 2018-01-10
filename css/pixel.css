@@ -1,0 +1,154 @@
+.flexSettings, #sizePicker, .colLeft, .buttons, .colRight, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.boxShadow, #submit, input[type=number], input[type=checkbox], .btn, table {
+  border: none;
+  -webkit-box-shadow: 4px 5px 8px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 4px 5px 8px 2px rgba(0, 0, 0, 0.8); }
+
+body {
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  background-image: url(../assets/2.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+h1 {
+  font-family: "Nosifer", cursive;
+  color: #fff;
+  text-shadow: 5px 4px 3px rgba(10, 10, 10, 0.7);
+  font-size: 90px;
+  margin: 0.2em; }
+
+h2 {
+  margin: 15px;
+  font-size: 2.5em;
+  font-family: "Henny Penny", cursive;
+  text-shadow: 4px 3px 3px rgba(10, 10, 10, 0.8); }
+
+h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-family: "Snowburst One", cursive;
+  font-weight: 700; }
+
+p {
+  margin-right: 2%;
+  margin-bottom: 1%;
+  margin-top: 4px;
+  font-family: "Snowburst One", cursive; }
+
+.hidden {
+  display: none; }
+
+.artBoard {
+  max-width: 95%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  padding-top: 3%; }
+
+#sizePicker {
+  max-width: 47%;
+  margin: auto;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+#submit {
+  background-color: #f9f226;
+  width: 8em;
+  height: 25px;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 500;
+  font-size: 15px; }
+
+input[type=number] {
+  width: 4em;
+  height: 20px;
+  text-align: center; }
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px; }
+
+.row {
+  margin: auto;
+  max-width: 100%; }
+
+.colLeft {
+  flex-direction: column;
+  padding: 2%; }
+
+.borderTxt {
+  font-family: Snowburst One;
+  font-size: 18px; }
+
+.buttons {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.btn {
+  width: 150px;
+  height: 40px;
+  margin-top: 3%;
+  background-color: green;
+  margin-right: 1%;
+  cursor: pointer;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 500;
+  font-size: 20px; }
+
+.colRight {
+  margin-top: 1%;
+  flex-direction: column;
+  padding: 2%; }
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #fff; }
+
+tr,
+td {
+  border: 1px solid black;
+  height: 15px;
+  width: 15px; }
+
+.hide {
+  border: none; }
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  margin-top: 2%; }
+  footer p {
+    font-size: 14px;
+    margin: 0 auto; }
+  footer a {
+    color: #fff;
+    text-decoration: none; }
+    footer a:hover {
+      text-decoration: underline;
+      color: #58a8ed; }
+
+@media(max-width: 768px) {
+  h1 {
+    font-size: 50px; }
+
+  h2 {
+    font-size: 1.8em; }
+
+  #submit {
+    margin-top: 7%; } }
+@media(max-width: 375px) {
+  h1 {
+    font-size: 38px; } }
+
+/*# sourceMappingURL=pixel.css.map */
