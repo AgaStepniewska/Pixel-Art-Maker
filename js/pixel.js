@@ -28,15 +28,13 @@ $(document).ready(function(){
 		$('#borders').prop('checked', true);
 		$('#gridBorder').removeClass('hidden');
 		$('#pickColor').removeClass('hidden');
-		$('#doubleClick').removeClass('hidden');
-		
+
 		if(inputWidth >70 || inputHeight > 70){
 			alert("Maximum value is 70!");
 			deleteGrid();
 			button.addClass('hidden');
 			$('#gridBorder').addClass('hidden');
 			$('#pickColor').addClass('hidden');
-			$('#doubleClick').addClass('hidden');
 		}
 	};
 
