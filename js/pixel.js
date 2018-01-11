@@ -70,43 +70,58 @@ table.mouseover(function(event){
 			$(this).css('background-color', color.val());
 			mouseClicked = false;
 		});
+		table.on('dblclick', 'td', function(){
+			$(this).css('background-color', "");
+		});
 	}
 
 //remove a color from the cell: 
 	function removeColor(){
-		table.on('dblclick', 'td', function(){
+		table.on('mousemove', 'td', function(){
+			if(mouseClicked)
+			$(this).css('background-color', "");
+		});
+		table.on('mousedown', 'td', function(){
+			mouseClicked = true;
+		});
+		table.on('mouseup', 'td', function(){
+			mouseClicked = false;
+		});
+		table.on('click', 'td', function(){
 			$(this).css('background-color', "");
 		});
 	}
 
 //coloring all cells: 
 	function colorAllCells(){
-		table.on('click', 'td', function(){
-			$(this).css('background-color', color.val());
-			mouseClicked = true;
-		});
 		table.on('mousemove', 'td', function(){
 			if(mouseClicked){
 				$(this).css('background-color', color.val());
 			}
 		});
+		table.on('mousedown', 'td', function(){
+			mouseClicked = true;
+		});
+		table.on('mouseup', 'td', function(){
+			mouseClicked = false;
+		});
+
 	}
-	var oneCellBtn = $('#oneCell'),
-		allCellBtn = $('#allCells');
+	var eraseBtn = $('#erase'),
+		drawBtn = $('#draw');
 	
-	oneCellBtn.click(function(){
+	eraseBtn.click(function(){
+		removeColor();
+		
+	})
+	drawBtn.click(function(){
 		mouseClicked = false;
 		colorOneCell();
-		removeColor();
-	});
-
-	allCellBtn.click(function(){
 		colorAllCells();
-		removeColor();
 	});
 	
 	colorOneCell();
-	removeColor();
+	colorAllCells();
 	
 //to show or hide borders in the table grid	
 	$('#borders').change(function(){
